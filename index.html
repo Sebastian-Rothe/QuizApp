@@ -3,12 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <title>Document</title>
   </head>
-  <body>
-  
+  <body onload="init()">
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1"><h1>wo ist bootstrap</h1></span>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="card  quiz-card px-4">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 id="questionText" class="card-title">Question</h5>
+        </div>
+
+        <div id="answer_1" class="card mb-2">
+          <div class="card-body">Answer</div>
+        </div>
+
+        <div id="answer_2" class="card mb-2">
+          <div class="card-body">Answer</div>
+        </div>
+
+        <div id="answer_3" class="card mb-2">
+          <div class="card-body">Answer</div>
+        </div>
+        <div id="answer_4" class="card mb-2">
+          <div class="card-body">Answer</div>
+        </div>
+      
+        <div id="Answer" class="question-footer mb-2">
+          <div><b>1</b> of <b id="all-questions">5</b> Questions</div>
+          <button class="btn btn-primary">next question</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
