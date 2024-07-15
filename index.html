@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/ icons/favicon.ico" />
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -18,33 +19,66 @@
       </div>
     </nav>
 
-    <div class="container">
-      <div class="card  quiz-card px-4">
+    <div class="container d-none">
+      <div class="card quiz-card px-4">
         <img src="..." class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 id="questionText" class="card-title">Question</h5>
         </div>
 
-        <div id="answer_1" class="card mb-2">
+        <div
+          id="answer_1"
+          class="card quiz-answer mb-2"
+          onclick="answer('answer_1')"
+        >
           <div class="card-body">Answer</div>
         </div>
 
-        <div id="answer_2" class="card mb-2">
+        <div
+          id="answer_2"
+          class="card quiz-answer mb-2"
+          onclick="answer('answer_2')"
+        >
           <div class="card-body">Answer</div>
         </div>
 
-        <div id="answer_3" class="card mb-2">
+        <div
+          id="answer_3"
+          class="card quiz-answer mb-2"
+          onclick="answer('answer_3')"
+        >
           <div class="card-body">Answer</div>
         </div>
-        <div id="answer_4" class="card mb-2">
+        <div
+          id="answer_4"
+          class="card quiz-answer mb-2"
+          onclick="answer('answer_4')"
+        >
           <div class="card-body">Answer</div>
         </div>
-      
-        <div id="Answer" class="question-footer mb-2">
-          <div><b>1</b> of <b id="all-questions">5</b> Questions</div>
-          <button class="btn btn-primary">next question</button>
+
+        <div id="answerAmount" class="question-footer mb-2">
+          <div>
+            <b id="question-count">1</b> of
+            <b id="all-questions">5</b> Questions
+          </div>
+          <button
+            id="next-button"
+            class="btn btn-primary"
+            disabled
+            onclick="nextQuestion()"
+          >
+            next question
+          </button>
         </div>
       </div>
     </div>
   </body>
+  <div id="end-screen" class="end-screen">
+    <img src="./App Blue/Group 5.png" alt="" />
+    <h2>COMPLETE QUIZ</h2>
+    <div class="align-score"><span>YOUR SCORE</span> <div id="score">10 / 10</div></div>
+    <button>SHARE</button>
+    <button>REPLAY</button>
+</div>
 </html>
