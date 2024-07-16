@@ -13,15 +13,33 @@
     <title>Document</title>
   </head>
   <body onload="init()">
-    <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1"><h1>wo ist bootstrap</h1></span>
-      </div>
-    </nav>
+    <div id="progress-bar" class="progress" role="progressbar">
+      <div class="progress-bar" style="width: 0%">0%</div>
+    </div>
+ 
 
-    <div class="container d-none">
+    <div class="container">
+      <div id="side-bar" class="side-bar">
+        <img src="./App Blue/Group 8.png" alt="">
+        <div class="links">
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JS</a>
+        <a href="#">JAVA</a>
+        </div>
+      </div>
+      <div id="end-screen" class="end-screen d-none">
+        <img src="./App Blue/Group 5.png" alt="" />
+        <h2>COMPLETE QUIZ</h2>
+        <div class="align-score"><span>YOUR SCORE</span> <div id="score">10 / 10</div></div>
+        <button type="button" class="btn btn-primary">SHARE</button>
+        <button type="button" class="btn btn-primary">REPLAY</button>
+      </div>
+
       <div class="card quiz-card px-4">
         <img src="..." class="card-img-top" alt="..." />
+
+
         <div class="card-body">
           <h5 id="questionText" class="card-title">Question</h5>
         </div>
@@ -74,11 +92,7 @@
       </div>
     </div>
   </body>
-  <div id="end-screen" class="end-screen">
-    <img src="./App Blue/Group 5.png" alt="" />
-    <h2>COMPLETE QUIZ</h2>
-    <div class="align-score"><span>YOUR SCORE</span> <div id="score">10 / 10</div></div>
-    <button>SHARE</button>
-    <button>REPLAY</button>
-</div>
+
+
+
 </html>

@@ -1,12 +1,16 @@
 body {
   background-color: rgb(236, 243, 250);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 .quiz-card {
   width: 50%;
 }
 .container {
   background-color: rgb(236, 243, 250);
-  min-height: 100vh;
+  min-height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +38,7 @@ body {
 
 .end-screen {
   aspect-ratio: 1 / 1;
-  height: 50%;
+  height: 30%;
   background-color: rgb(255, 228, 207);
   border-radius: 100%;
   width: 50%;
@@ -46,4 +50,37 @@ body {
 .align-score{
     display: flex;
     justify-content: space-between;
+}
+.progress{
+  background-color: blue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.side-bar{
+  height: 75vh;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 15%;
+  padding-top: 24px;
+}
+.links{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 56px;
+  gap: 16px;
+  font-size: 20px;
+}
+.links a{
+  text-decoration: none;
+  color: white;
 }

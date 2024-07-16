@@ -51,7 +51,15 @@ function init() {
 function showQuestion() {
     if(currentQuestion >= questions.length){
         // show end screen
-    } else {
+    } else { 
+
+      let percent = (currentQuestion + 1) / questions.length;
+      percent = Math.round(percent * 100);
+document.getElementById('progress-bar').innerHTML = `${percent}%`;
+document.getElementById('progress-bar').style = `width: ${percent}%;`;
+
+
+      console.log(percent)
         let question = questions[currentQuestion];
         document.getElementById("question-count").innerHTML = currentQuestion + 1;
         document.getElementById("questionText").innerHTML = question.question;
@@ -92,3 +100,5 @@ function resetAnswerButtons() {
   document.getElementById("answer_4").classList.remove("bg-success");
   document.getElementById("answer_4").classList.remove("bg-danger");
 }
+
+
