@@ -4,12 +4,9 @@ let yourScore = 0;
 let AUDIO_SUCCESS = new Audio('./audio/success.mp3');
 let AUDIO_WRONG= new Audio('./audio/wrong.mp3');
 
-
-
 function init() {
   document.getElementById("background").classList.add("d-none");
   document.getElementById("quiz-card").classList.remove("d-none");
-
   document.getElementById("all-questions").innerHTML = questions.length;
   showQuestion();
 }
