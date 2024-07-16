@@ -4,43 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/images/ icons/favicon.ico" />
+   
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
+    <script src="data.js"></script>
     <script src="script.js"></script>
     <title>Document</title>
   </head>
-  <body onload="init()">
+  <body>
     <div id="progress-bar" class="progress" role="progressbar">
       <div class="progress-bar" style="width: 0%">0%</div>
     </div>
- 
 
     <div class="container">
       <div id="side-bar" class="side-bar">
-        <img src="./App Blue/Group 8.png" alt="">
+        <img src="./App Blue/Group 8.png" alt="" />
         <div class="links">
-        <a href="#">HTML</a>
-        <a href="#">CSS</a>
-        <a href="#">JS</a>
-        <a href="#">JAVA</a>
+          <a href="#" onclick="pushData('html'); init()">HTML</a>
+          <a href="#" onclick="pushData('css'); init()">CSS</a>
+          <a href="#" onclick="pushData('javascript'); init()">JS</a>
+          <a href="#" onclick="pushData('java'); init()">JAVA</a>
         </div>
+      </div>
+      <div id="background" class="background">
+        <img src="./App Blue/bg b.png" alt="">
       </div>
       <div id="end-screen" class="end-screen d-none">
         <img src="./App Blue/Group 5.png" alt="" />
         <h2>COMPLETE QUIZ</h2>
-        <div class="align-score"><span>YOUR SCORE</span> <div id="score">10 / 10</div></div>
-        <button type="button" class="btn btn-primary">SHARE</button>
-        <button type="button" class="btn btn-primary">REPLAY</button>
+        <div class="align-score">
+          <span class="span-score">YOUR SCORE</span>
+          <div id="score"><b id="your-score"></b> / <b id="possible-score"></b></div>
+        </div>
+        <button type="button" class="btn btn-primary btn1">SHARE</button>
+        <button type="button" class="btn btn-primary btn2" onclick="restartGame()">REPLAY</button>
       </div>
 
-      <div class="card quiz-card px-4">
-        <img src="..." class="card-img-top" alt="..." />
-
-
+      <div id="quiz-card" class="card quiz-card px-4 d-none">
         <div class="card-body">
           <h5 id="questionText" class="card-title">Question</h5>
         </div>
@@ -93,7 +98,4 @@
       </div>
     </div>
   </body>
-
-
-
 </html>
